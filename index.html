@@ -4,31 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <title>Ampol – Cebu Viral Icon</title>
   </head>
 
   <body class="bg-neutral-950 text-neutral-100">
-    <section class="min-h-screen flex items-center justify-center px-6 py-20">
-      <div class="max-w-6xl w-full">
-        <div class="text-center mb-14">
-          <h1 class="text-5xl md:text-7xl font-bold tracking-tight">Ampol</h1>
-          <p class="mt-4 text-neutral-400 max-w-2xl mx-auto">
-            A viral Cebuano personality known for dance, humor, and
-            unforgettable presence.
-          </p>
-        </div>
+    <section class="relative h-screen w-full overflow-hidden">
+      <img
+        src="./src/assets/images/hero.jpg"
+        alt="Ampol Hero Image"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/80"></div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div
+        class="relative z-10 h-full flex flex-col justify-center items-center text-center px-6"
+      >
+        <h1 class="text-5xl md:text-8xl font-bold tracking-tight">Ampol</h1>
+        <p class="mt-4 max-w-2xl text-neutral-300 text-lg">
+          Cebu’s viral dancing icon—known for humor, rhythm, and unforgettable
+          energy.
+        </p>
+      </div>
+    </section>
+
+    <section class="min-h-screen flex items-center justify-center px-6 py-24">
+      <div class="max-w-6xl w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
           <div class="space-y-8">
             <div>
               <h2 class="text-2xl font-semibold mb-3">Who is Ampol?</h2>
               <p class="text-neutral-300 leading-relaxed">
-                “Ampol” from Cebu refers to a popular and often humorous viral
-                figure known for dancing and being a local internet personality
-                in the Philippines. He gained recognition through social media
-                because of his unique style, expressive movements, and
-                entertaining presence.
+                Ampol is a popular viral personality from Cebu, recognized for
+                his entertaining dance videos and humorous online presence. He
+                gained widespread attention through social media due to his
+                expressive movements and unique style.
               </p>
             </div>
 
@@ -39,63 +48,136 @@
                   <span class="font-medium text-neutral-200"
                     >Viral Personality:</span
                   >
-                  Ampol became famous online for entertaining dance videos
-                  shared widely in the Cebu region.
+                  Ampol’s dance videos became widely shared across social media,
+                  capturing the attention of audiences in Cebu and beyond.
                 </li>
                 <li>
                   <span class="font-medium text-neutral-200">Local Icon:</span>
-                  He is a recognizable informal celebrity in the Cebuano
-                  internet scene, often associated with humor and positive
-                  energy.
+                  He is a recognizable figure in Cebuano internet culture,
+                  celebrated for humor, energy, and positivity.
                 </li>
               </ul>
             </div>
 
-            <div class="pt-4">
-              <p class="text-neutral-300 italic">
-                In essence, Ampol is a fun and memorable viral internet
-                personality from Cebu, celebrated for his dancing and online
-                presence.
-              </p>
+            <p class="text-neutral-300 italic pt-4">
+              In summary, Ampol is a fun, memorable, and celebrated internet
+              personality from Cebu.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3">
+              <img
+                src="./src/assets/images/1.jpeg"
+                class="w-full rounded-lg"
+                alt="Ampol photo 1"
+              />
+              <img
+                src="./src/assets/images/2.jpeg"
+                class="w-full rounded-lg"
+                alt="Ampol photo 2"
+              />
+              <img
+                src="./src/assets/images/3.jpeg"
+                class="w-full rounded-lg"
+                alt="Ampol photo 3"
+              />
+              <img
+                src="./src/assets/images/4.jpeg"
+                class="w-full rounded-lg"
+                alt="Ampol photo 4"
+              />
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 max-w-90">
-            <div>
-              <img
-                src="./src/assets/images/1.jpeg"
-                alt="Ampol photo 1"
-                class="rounded-xl object-cover aspect-square hover:scale-105 transition"
-              />
+          <div class="flex flex-col items-center space-y-4">
+            <div
+              class="relative w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden border border-neutral-800 bg-black"
+            >
+              <iframe
+                id="ampolReel"
+                class="w-full h-full"
+                src=""
+                title="Ampol Reel"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+
+              <button
+                id="prevReel"
+                class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 p-3 rounded-full"
+              >
+                ◀
+              </button>
+              <button
+                id="nextReel"
+                class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 p-3 rounded-full"
+              >
+                ▶
+              </button>
             </div>
-            <div>
+
+            <p id="reelTitle" class="text-neutral-400 text-sm text-center"></p>
+
+            <div class="text-center space-y-2">
+              <h2 class="text-2xl uppercase font-semibold">Support Ampol</h2>
+              <p class="text-neutral-300">
+                Send any amount to show your support for Ampol’s work and
+                creativity.
+              </p>
               <img
-                src="./src/assets/images/2.jpeg"
-                alt="Ampol photo 2"
-                class="rounded-xl object-cover aspect-square hover:scale-105 transition"
-              />
-            </div>
-            <div>
-              <img
-                src="./src/assets/images/3.jpeg"
-                alt="Ampol photo 3"
-                class="rounded-xl object-cover aspect-square hover:scale-105 transition"
-              />
-            </div>
-            <div>
-              <img
-                src="./src/assets/images/4.jpeg"
-                alt="Ampol photo 4"
-                class="rounded-xl object-cover aspect-square hover:scale-105 transition"
+                src="./src/assets/images/qr_code.jpeg"
+                alt="Ampol Donation QR Code"
+                class="mx-auto rounded-lg max-w-90"
               />
             </div>
           </div>
         </div>
 
-        <div class="mt-20 text-center text-sm text-neutral-500">
+        <div class="mt-24 text-center text-sm text-neutral-500">
           © 2026 • Celebrating a Cebuano Internet Icon
         </div>
       </div>
     </section>
+
+    <script>
+      const ampolReels = [
+        { title: "Ampol Viral Short 1", youtubeId: "_NOwIoTsamM" },
+        { title: "Ampol Viral Short 2", youtubeId: "w2YG4qUwOq4" },
+        { title: "Ampol Viral Short 3", youtubeId: "8W7TyWA8Ou4" },
+        { title: "Ampol Viral Short 4", youtubeId: "l3eRUBxw9UM" },
+        { title: "Ampol Dance – Street Vibes", youtubeId: "abc123XYZ" },
+      ];
+
+      let currentIndex = 0;
+      const iframe = document.getElementById("ampolReel");
+      const titleEl = document.getElementById("reelTitle");
+      const prevBtn = document.getElementById("prevReel");
+      const nextBtn = document.getElementById("nextReel");
+
+      function loadReel(index) {
+        const reel = ampolReels[index];
+        iframe.src = `https://www.youtube.com/embed/${reel.youtubeId}?controls=1&modestbranding=1&rel=0`;
+        titleEl.textContent = reel.title;
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex =
+          (currentIndex - 1 + ampolReels.length) % ampolReels.length;
+        loadReel(currentIndex);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % ampolReels.length;
+        loadReel(currentIndex);
+      });
+
+      loadReel(currentIndex);
+    </script>
   </body>
 </html>
